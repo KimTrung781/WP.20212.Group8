@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <style>
+        .someting {
+            background-color: #ff9900;
+            color: #000033;
+            padding: 20px;
+            background-image: url('header.png');
+        }
+        .FormStyle {
+            background-image: url('background4.png');
+            background-size: cover;
+            color: #000000 ;
+            padding: 20px;
+        }
+    </style>
+    <head></head>
+    <body>
+        <div class="someting"> <img src="logo.png" alt ="header"></div>
+        <div class='FormStyle'>
+            
+            <form action="2.9Exercise.php" method="get">
+                <table width=400px>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type ="text" size="16" maxlength="30" name="Name"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>class</td>
+                        <td><input type ="text" size="16" maxlength="30" name="Class"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>University</td>
+                        <td><input type ="text" size="16" maxlength="30" name="University"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coding Languages</td>
+                        <td>
+                            <input type="radio" id="html" name="Language" value="HTML">
+                            <label for="html">HTML</label>
+                            <input type="radio" id="CSS" name="Language" value="CSS">
+                            <label for="CSS">CSS</label>
+                            <input type="radio" id="JavaScript" name="Language" value="JavaScript">
+                            <label for="JavaScript">JavaScript</label>
+                        </td>
+                    </tr>
+                </table>
+                would you like to <br>
+                <input type="checkbox" id="choice1" name="choice1" value="send you news about our latest products">
+                <label for="choice1">Receive Emails about our latest news</label><br>
+                <input type="checkbox" id="choice2" name="choice2" value=", install xampp add-ons">
+                <label for="choice2">install XAMPP add-ons</label><br>
+                <input type="submit" value="Click To Submit">
+                <input type="reset" value="Erase and Restart">
+            </form>
+        </div>
+    </body>
+</html>
