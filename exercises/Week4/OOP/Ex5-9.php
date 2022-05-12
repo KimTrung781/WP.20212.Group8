@@ -160,7 +160,7 @@ class Page
         </form>
         <div style="flex: 1; margin-left: 30px; border: 1px solid #333;">
         <?php
-            $page = new Page($title, $year, $content);
+            $page = new Page($title, $year, $copyright);
             $page->addContent($content);
             echo $page->get();
         ?>
@@ -168,3 +168,5 @@ class Page
     </div>
 </body>
 </html>
+
+

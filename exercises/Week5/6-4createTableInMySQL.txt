@@ -1,0 +1,21 @@
+CREATE TABLE Businesses (
+	BusinessID int PRIMARY KEY NOT null,
+    Name varchar(255),
+    Address varchar(255),
+    City varchar(255),
+    Telephone varchar(255),
+    URL varchar(255)
+);
+
+CREATE TABLE Categories (
+	CategoryID int PRIMARY KEY NOT null,
+    Title varchar(255),
+    Description varchar(255)
+);
+
+CREATE TABLE Biz_Categories (
+	BusinessID int NOT NULL,
+    CategoryID int NOT NULL,
+    FOREIGN KEY (BusinessID) REFERENCES Businesses(BusinessID),
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
+);
