@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#header {
+    color: white;
+    background: red;
+    width: 100%;
+}
+#rightcol {
+    background: yellow;
+    float: right;
+    width: 30%;
+    height: 700px;
+}
+#content {
+    background: #fff;
+    float: left;
+    width: 69%;
+    height: 700px;
+}
+#footer {
+    color: white;
+    background: blue;
+    clear: both;
+    width: 100%;
+}
