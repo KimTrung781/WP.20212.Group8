@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Exercise1</title>
+        <script>
+            function changeColor(color){
+                document.getElementById("text").style.color=color;
+            }
+        </script>
+    </head>
+    <body>
+        <b id="red" onmouseover="changeColor('red')"
+                    onmouseout="changeColor('black')"
+                    style = "color: red">
+            red
+        </b>
+        
+        <b id="green"  onmouseover="changeColor('green')"
+                       onmouseout="changeColor('black')"
+                       style = "color: green">
+            green
+        </b>
+        
+        <b id="blue"  onmouseover="changeColor('blue')"
+                      onmouseout="changeColor('black')"
+                      style = "color: blue">
+            blue
+        </b>
+        
+        <br>
+        <p id ="text">test text color</p>
+        
+    </body>
+</html>
