@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Register form</title>
+        <script type="text/javascript">
+            function validateUsername(){
+                var nameCheck = new RegExp("^[A-Za-z0-9]{6,12}$");
+                if (nameCheck.test(document.myForm.usernameField.value)){
+                    return true;
+                } else{
+                    alert("Invalid Username: " + document.myForm.usernameField.value +"\nUsername consists of 6-12 characters and doesn't contain special character");
+                    return false;
+                }
+            }
+            function validateEmail(){
+                var mailCheck = new RegExp("^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$");
+                if (mailCheck.test(document.myForm.emailField.value)){
+                    return true;
+                } else{
+                    alert("Invalid email: " + document.myForm.emailField.value);
+                    return false;
+                }
+            }
+            function validateTelephone(){
+                var phoneCheck = new RegExp("^0[0-9]{9}$");
+                if (phoneCheck.test(document.myForm.telephoneField.value)){
+                    return true;
+                } else{
+                    alert("Invalid phone number: " + document.myForm.telephoneField.value + "\nRequired 10 digits");
+                    return false;
+                }
+            }
+            function validatePassword(){
+                var passCheck = new RegExp("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$");
+                if (passCheck.test(document.myForm.passwordField.value)){
+                    return true;
+                } else{
+                    alert("Invalid password: " + document.myForm.passwordField.value + "\nPassword must has at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 digit");
+                    return false;
+                }
+            }
+            function validatePassword2(){
+                if (document.myForm.passwordField.value===document.myForm.password2Field.value){
+                    return true;
+                } else{
+                    alert("The confirmed password doesn't match the original one");
+                    return false;
+                }
+            }
+            function validate(){
+                if (validateUsername() && validateEmail() && validateTelephone() && validatePassword() && validatePassword2()){
+                    alert("Submitted successfully!");
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm">
+            Username: <input type="text" name="usernameField">
+            <br>
+            Email: <input type="text" name="emailField">
+            <br>
+            Telephone: <input type="text" name="telephoneField">
+            <br>
+            Password: <input type="text" name="passwordField">
+            <br>
+            Confirm Password: <input type="text" name="password2Field">
+            <br>
+            <input type="button" value="Submit" onclick="validate()">
+        </form>
+    </body>
+</html>
