@@ -29,14 +29,14 @@ function getXMLHttpRequest()
                       request = new ActiveXObject("MSXML2.XMLHttp.3.0");
                           }
                       catch (err) {
-                           request = false;  // oops, can.t create one!  
+                           request = false;  // oops, can.t create one!
                                   }
                    }
               }
-   return request;  
+   return request;
 }
 
-function ajaxResponse()  //This gets called when the readyState changes.  
+function ajaxResponse()  //This gets called when the readyState changes.
 {
    if (ajaxRequest.readyState != 4)  //  check to see if we're done
       {  return;  }
@@ -60,9 +60,9 @@ function startSearch()
 
 function liveSearch()
 {
-   ajaxRequest = getXMLHttpRequest(); 
-   if (!ajaxRequest)  alert("Request error!"); 
-   var myURL = "Exercise2BackEnd.php";
+   ajaxRequest = getXMLHttpRequest();
+   if (!ajaxRequest)  alert("Request error!");
+   var myURL = "Exercise4BackEnd.php";
    var query = document.getElementById("searchstring").value;
    myURL = myURL + "?query=" + query;
    ajaxRequest.onreadystatechange = ajaxResponse;
@@ -70,9 +70,9 @@ function liveSearch()
    ajaxRequest.send(null);
 }
 
-function displaySearchResults() 
-//  This function will display the search results, and is the 
-//  callback function for the Ajax request.  
+function displaySearchResults()
+//  This function will display the search results, and is the
+//  callback function for the Ajax request.
 {
    var i, n, li, t;
    var ul = document.getElementById("list");
@@ -85,14 +85,14 @@ function displaySearchResults()
    //  get the results from the search request object
    var names=ajaxRequest.responseXML.getElementsByTagName("name");
    for (i = 0; i < names.length; i++)
-       {  
+       {
          li = document.createElement("LI");
          n = names[i].firstChild.nodeValue;
          t = document.createTextNode(n);
          li.appendChild(t);
-         ul.appendChild(li); 
+         ul.appendChild(li);
        }
-   if (names.length == 0)  // if no results are found, say so 
+   if (names.length == 0)  // if no results are found, say so
       {
          li = document.createElement("LI");
          li.appendChild(document.createTextNode("No results."));
@@ -121,4 +121,3 @@ obj.onkeydown = startSearch;
 
 </body>
 </html>
-
