@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<studentInfo>
+	<id>20176738</id>
+	<name>
+		<firstname>Cao Duy</firstname>
+		<lastname>Dao</lastname>
+	</name>
+	<class>ICT-03-K62</class>
+	<CPA>2.97</CPA>
+	<birthdate>10/09/1999</birthdate>
+</studentInfo>
