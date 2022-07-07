@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Placemark>
+<name>My Home</name>
+<description>Home of Dao Cao Duy</description>
+<Point>
+<coordinates>21.043956378401095,105.76812900358871,0</coordinates>
+</Point>
+</Placemark>
+</kml>
