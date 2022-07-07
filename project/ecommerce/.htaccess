@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteBase /ecommerce/
+
+    RewriteRule ^([^/]+)/?$ index.php?url=$1 
+    RewriteRule ^([^/]+)/([^/]+)/?$ index.php?url=$1/$2 
+
+    ErrorDocument 404 /
+</IfModule>
+
+
