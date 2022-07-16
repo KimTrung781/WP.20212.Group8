@@ -9,36 +9,36 @@
      
         <?php echo '<image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'shipping.png"' . '" alt="' . '"/ >'; ?>
         <?php echo '<image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'banner.jpeg"' . '" alt="' . '"/ >'; ?>
-        <h1>#3HSale</h1>
+        <h1>#MOISale</h1>
         <?php echo '<a href="?url=category/view/top/coat"><image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'men.jpeg"' . '" alt="' . '"/ ></a>'; ?>
         <?php echo '<a href="?url=category/view/shoes"><image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'banner-shoes.jpeg"' . '" alt="' . '"/ ></a>'; ?>
-        <h1>#3HProducts</h1>
+        <h1>#MOIProducts</h1>
         <table id="home-table">
             <tr>
                 <td><?php echo '<a href="?url=category/view/top/t-shirt"><image class="img-max-width" src="' . PATH_URL_IMG_HOME . 't-shirt.jpeg"' . '" alt="' . '"/ ></a>'; ?></td>
                 <td class=" td-padding">
-                    <h2>2021 New T-shirt Collection</h2>
-                    <h3>Active and Creative</h3>
+                    <h1>2022 New T-shirt Collection</h1>
+                    <h2>Active and Creative</h2>
                 </td>
             </tr>
             <tr>
                 <td class="td-right td-padding">
-                    <h2>Straight-Fit Jeans</h2>
-                    <h3>Elevate your look with the latest 3H's jeans</h3>
+                    <h1>Straight-Fit Jeans</h1>
+                    <h2>Elevate your look with the latest MOI's jeans</h2>
                 </td>
                 <td><?php echo '<a href="?url=category/view/bottom/jeans"><image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'jeans.jpeg"' . '" alt="' . '"/ ></a>'; ?></td>
             </tr>
             <tr>
                 <td><?php echo '<a href="?url=category/view/shoes"><image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'shoes3.jpeg"' . '" alt="' . '"/ ></a>'; ?></td>
                 <td class=" td-padding">
-                    <h2>Unifactor Running Shoes</h2>
-                    <h3>All styles and colours available in the online store.</h3>
+                    <h1>Unifactor Running Shoes</h1>
+                    <h2>All styles and colours available in the online store.</h2>
                 </td>
             </tr>
             <tr>
                 <td class="td-right td-padding">
-                    <h2>2021 Autumn/Winter Collection</h2>
-                    <h3>Available online + in select stores 9/27 mid-morning ET</h3>
+                    <h1>2022 Summer Collection</h1>
+                    <h2>Available online and in stores until 22/7/2022</h2>
                 </td>
                 <td><?php echo '<a href="?url=category/view/top/coat"><image class="img-max-width" src="' . PATH_URL_IMG_HOME . 'coat.png"' . '" alt="' . '"/ ></a>'; ?></td>
             </tr>

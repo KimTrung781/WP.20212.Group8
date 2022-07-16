@@ -11,7 +11,7 @@
 .site__footer {
     display: flex;
     align-items: center;
-    background-color: #ff8607;
+    background-color: #0f90db;
 }
 
 .site__footer-social-links {
@@ -28,7 +28,7 @@
 }
 
 .site__footer-copyright {
-    color: wheat;
+    color: rgb(250, 250, 250);
 }
 
 @media screen and (max-width: 750px) {
