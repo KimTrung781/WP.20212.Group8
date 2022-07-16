@@ -37,5 +37,5 @@
 
 
 <?php else : ?>
-    <div style="text-align:center;height:30vh;font-size:20px;width: 100%;"> No product founds</div>
+    <div style="text-align:center;height:30vh;font-size:60px;width: 100%;">  No product fount  </div>
 <?php endif ?>

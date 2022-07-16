@@ -4,7 +4,7 @@ button.dropbtn a {
 }
 
 .dropbtn {
-    background-color: #3a3a3a;
+    background-color: #0054a2;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -65,8 +65,8 @@ a {
     color: #ffff;
     height: 40px;
     width: 85px;
-    background-color: #04aa6d;
-    border: 1px solid #04aa6d;
+    background-color: #0481aa;
+    border: 1px solid #0481aa;
     margin-right: 10px;
     border-radius: 0px 8px 8px 0px;
 }
@@ -289,7 +289,7 @@ button#myBtn {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
+    background-color: rgb(0, 157, 255);
     color: white;
     cursor: pointer;
     padding: 15px;
