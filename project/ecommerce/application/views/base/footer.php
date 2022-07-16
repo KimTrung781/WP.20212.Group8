@@ -2,16 +2,17 @@
 <link rel="stylesheet" href="<?php echo PATH_URL_STYLE . 'footer.css' ?>">
 <footer>
     <a href="?url=home/view">
-        <?php echo '<image id="img-footer" src="' . PATH_URL_IMG_HOME . 'footer.jpeg"' . '" alt="' . '"/ >'; ?>
+        <?php echo '<image id="img-footer" src="' . PATH_URL_IMG_HOME . 'footer.png"' . '" alt="' . '"/ >'; ?>
     </a>
     <div class="site__footer">
         <div class="inner">
             <div class="site__footer-copyright">
                 <p>
-                    © Copyright 2021 &nbsp;-&nbsp; 3H Fashion </p>
+                    © Copyright 2022 Group8 License MOI Fashion 
+                </p>
             </div>
             <div class="site__footer-copyright">
-                Hotline: 093.000.909
+                Hotline: 0909.988.777
             </div>
             <div class="site__footer-social-links">
                 <a href="https://twitter.com/" class="sc-twitter" target="_blank">
