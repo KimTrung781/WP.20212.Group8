@@ -1,19 +1,20 @@
 <head>
     <link rel="stylesheet" href="<?php
 
-                                    use function PHPSTORM_META\type;
+use function PHPSTORM_META\type;
 
-                                    echo PATH_URL_STYLE . 'product.css' ?>">
+echo PATH_URL_STYLE . 'product.css'?>">
 </head>
 <?php
 json_encode($product);
 
-
-
 $highlight_img = 1;
 if (isset($_GET['highlight'])) {
     $highlight_img = $_GET['highlight'];
-    if ($highlight_img < 1 || $highlight_img > 4) $highlight_img = 1;
+    if ($highlight_img < 1 || $highlight_img > 4) {
+        $highlight_img = 1;
+    }
+
 }
 
 if ($product) {
@@ -46,12 +47,10 @@ if ($product) {
     $quantities = (json_decode($product["Quantity"], true));
 }
 
-
-
 ?>
 
 <script>
-    var quantities = <?php echo  json_encode($quantities); ?>;
+    var quantities = <?php echo json_encode($quantities); ?>;
     // console.log(quantities)
 
     function closePopup() {
@@ -99,7 +98,7 @@ if ($product) {
         var entered_qty = document.getElementById('quantity').value;
 
         console.log(quantities[prod_type], quantities[prod_type]['qty']);
-        // // check quantity 
+        // // check quantity
         if (parseInt(quantities[prod_type]['qty']) < entered_qty) {
             popUpError("Your quantity must be less than number of items in stock")
             return;
@@ -126,7 +125,7 @@ if ($product) {
 </script>
 
 
-<?php if ($product) : ?>
+<?php if ($product): ?>
 
 
     <div class="product-model">
@@ -135,13 +134,29 @@ if ($product) {
                 <img src="<?php echo PATH_URL_IMG_PRODUCT . $product['Image' . $highlight_img] ?>" id="highlight-img">
 
                 <div class="img-slide">
-                    <?php for ($i = 1; $i < 5; $i++) :
-                        if ($i != $highlight_img) {
+                    <?php for ($i = 1; $i < 5; $i++):
+    if ($i != $highlight_img) {
 
-                            echo ('  <img src="' . PATH_URL_IMG_PRODUCT  . $product['Image' . $i] . '" class="img-responsive" ' . 'onclick="chooseImg(' . $i . ')">');
-                        } else {
-                        }
-                    endfor; ?>
+        echo ('  <img src="' . PATH_URL_IMG_PRODUCT . $product['Image' . $i] . '" class="img-responsive" ' . 'onclick="chooseImg(' . $i . ')">');
+    } else {
+    }
+endfor;?>
+                </div>
+                <div class="share" style="display: flex; justify-content: center;">
+                    <?php
+$title = urlencode('Title of Your iFrame Tab');
+$url = urlencode('http://www.facebook.com/yourfanpage');
+$summary = urlencode('Custom message that summarizes what your tab is about, or just a simple message to tell people to check out your tab.');
+$image = urlencode('http://www.yourdomain.com/facebookshare/images/customthumbnail.jpg');
+?>
+                    <h4>Share Product :</h4>
+                    <ul class="share_nav" style="padding: 0">
+                        <li>
+                            <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title; ?>&amp;p[summary]=<?php echo $summary; ?>&amp;p[url]=<?php echo $url; ?>&amp;&p[images][0]=<?php echo $image; ?>', 'sharer', 'toolbar=0,status=0,width=548,height=325');" target="_parent" href="javascript: void(0)"><img src="<?php echo PATH_URL_IMG . 'logo/facebook.png' ?>" title="Facebook"></a>
+                        </li>
+                        <li><a href="#"><img src="<?php echo PATH_URL_IMG . 'logo/twitter.png' ?>" title="Twitter"></a></li>
+                        <li><a href="#"><img src="<?php echo PATH_URL_IMG . 'logo/google.png' ?>" title="Google"></a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -153,14 +168,14 @@ if ($product) {
 
                     <div class="rating">
                         <?php for ($i = 0; $i < 5; $i++) {
-                            echo ('<span style="color: #ff8f00;">&#9733;</span>');
-                        }
-                        ?>
+    echo ('<span style="color: #ff8f00;">&#9733;</span>');
+}
+?>
 
                         <div class="clearfix"></div>
                     </div>
 
-                    <?php if ($product["isSaleOff"]) : ?>
+                    <?php if ($product["isSaleOff"]): ?>
                         <del>
                             <h4 class="del-price">Price
                                 : <?php echo $product ? number_format($product['Price'], 0, ',', '.') : 0; ?>
@@ -171,12 +186,12 @@ if ($product) {
                             <?php echo $product ? number_format(($product['Price']) - ($product['Price']) * ($product['Percent_off']) / 100, 0, ',', '.') : 0; ?>
                             VNĐ</span>
                         <br>
-                    <?php else : ?>
+                    <?php else: ?>
                         <span class="item_price"><?php echo $product ? ($product['Price']) : 0; ?></span>
                         <span class="custom_price">Price : <?php echo $product ? number_format($product['Price'], 0, ',', '.') : 0; ?>
                             VNĐ</span>
                         <br>
-                    <?php endif ?>
+                    <?php endif?>
 
 
                     <div class="item-detail">
@@ -186,24 +201,24 @@ if ($product) {
 
                             <select name="color" id="color">
                                 <?php foreach ($quantities as $item) {
-                                    echo '<option value="' . $item['color'] . '">' . $item['color'] . '</option>';
-                                }
-                                ?>
+    echo '<option value="' . $item['color'] . '">' . $item['color'] . '</option>';
+}
+?>
                             </select>
 
                             <h4>Size:</h4>
                             <select name="size" id="size">
                                 <?php foreach ($quantities as $item) {
-                                    echo '<option value="' . $item['size'] . '">' . $item['size'] . '</option>';
-                                }
-                                ?>
+    echo '<option value="' . $item['size'] . '">' . $item['size'] . '</option>';
+}
+?>
                             </select> -->
                             <h4>Color, Size, Items in stock:</h4>
                             <select name="prod" id="prod">
                                 <?php foreach ($quantities as $key => $item) {
-                                    echo '<option value="' . $key . '">' . $item['color'] . ', ' . $item['size'] . ': ' . $item['qty'] . ' items</option>';
-                                }
-                                ?>
+    echo '<option value="' . $key . '">' . $item['color'] . ', ' . $item['size'] . ': ' . $item['qty'] . ' items</option>';
+}
+?>
                             </select>
                             <h4>Quantity:</h4>
                             <input type="number" id="quantity" name="quantity" min="1" max="200" value="1">
@@ -215,26 +230,9 @@ if ($product) {
                 </div>
                 <h4>Description:</h4>
                 <p style="    line-height: 1.75;"><?php echo $product['Description']; ?></p>
-
-                <div class="share">
-                    <?php
-                    $title = urlencode('Title of Your iFrame Tab');
-                    $url = urlencode('http://www.facebook.com/yourfanpage');
-                    $summary = urlencode('Custom message that summarizes what your tab is about, or just a simple message to tell people to check out your tab.');
-                    $image = urlencode('http://www.yourdomain.com/facebookshare/images/customthumbnail.jpg');
-                    ?>
-                    <h4>Share Product :</h4>
-                    <ul class="share_nav">
-                        <li>
-                            <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title; ?>&amp;p[summary]=<?php echo $summary; ?>&amp;p[url]=<?php echo $url; ?>&amp;&p[images][0]=<?php echo $image; ?>', 'sharer', 'toolbar=0,status=0,width=548,height=325');" target="_parent" href="javascript: void(0)"><img src="<?php echo PATH_URL_IMG . 'logo/facebook.png' ?>" title="Facebook"></a>
-                        </li>
-                        <li><a href="#"><img src="<?php echo PATH_URL_IMG . 'logo/twitter.png' ?>" title="Twitter"></a></li>
-                        <li><a href="#"><img src="<?php echo PATH_URL_IMG . 'logo/google.png' ?>" title="Google"></a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 
-<?php else : echo ("Product not found"); ?>
-<?php endif ?>
+<?php else:echo ("Product not found");?>
+						<?php endif?>

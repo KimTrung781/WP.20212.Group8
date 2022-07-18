@@ -27,7 +27,8 @@
 }
 
 .item-name {
-    font-size: 0.75rem;
+    font-size: 14px;
+    font-weight: bold;
     line-height: 14px;
     text-align: center;
 }
@@ -88,6 +89,8 @@
 
 .filter button {
     background: #04AA6D;
+    color: #fff;
+    border: none;
 }
 
 .filter select {

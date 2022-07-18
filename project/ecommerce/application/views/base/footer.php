@@ -8,7 +8,7 @@
         <div class="inner">
             <div class="site__footer-copyright">
                 <p>
-                    © Copyright 2022 Group8 License MOI Fashion 
+                    © Copyright 2022 Group8 License MOI Fashion
                 </p>
             </div>
             <div class="site__footer-copyright">
@@ -35,7 +35,7 @@
 <style>
     #img-footer {
         max-width: 100%;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         /* position: absolute; */
         /* bottom: 0; */
     }
