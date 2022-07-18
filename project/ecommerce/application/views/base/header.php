@@ -94,7 +94,7 @@
 
 <body>
   <button onclick="topFunction()" id="myBtn" title="Go to top"> &uarr;</button>
-  <div style="margin:25px" id="header">
+  <div id="header">
 
     <nav id="not-response">
       <div class="menu">
@@ -119,26 +119,26 @@
 
         </div>
       </div>
-      <div><img src="<?php echo PATH_URL_IMG_LOGO . "logo.png" ?>" alt="logo" height=150 width=150 /></div>
+      <div><img src="<?php echo PATH_URL_IMG_LOGO . "logo.png" ?>" alt="logo" height=60 width=150 /></div>
 
       <div class="right">
-        <div style="margin-right:10px;display: flex"><input class="search-input" placeholder="Search product" id="search" onkeypress="handle(event)" />
+        <div style="margin-right:10px;display: flex; align-items: center;"><input class="search-input" placeholder="Search product" id="search" onkeypress="handle(event)" />
           <button class="btn-search" onclick="searchProduct()">Search</button>
         </div>
-        <div style="margin-right:15px;display:flex">
+        <div style="margin-right:15px;display:flex;align-items: center;">
 
-          <a href="?url=cart/view"> <img src="<?php echo PATH_URL_IMG_LOGO . "cart.svg"; ?>" width=40 height=40 style="margin-right:15px" /></a>
+          <a href="?url=cart/view"> <img src="<?php echo PATH_URL_IMG_LOGO . "cart.svg"; ?>" width=30 height=30 style="margin-right:15px" /></a>
           <div style=" display: flex;
     justify-content: space-around;">
-            <?php if (isset($_SESSION['username'])) : ?>
+            <?php if (isset($_SESSION['username'])): ?>
               <!-- Đăng nhập r -->
               <div class="dropdown">
-                <img src="<?php echo PATH_URL_IMG_LOGO . "user.svg"; ?>" class="fa fa-user tooltip" width=40 height=40 />
+                <img src="<?php echo PATH_URL_IMG_LOGO . "user 1.png"; ?>" class="fa fa-user tooltip" width=30 height=30 />
                 <div class="dropdown-content user">
                   <p id="username-header"><?php echo $_SESSION['username']; ?></p>
-                  <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 1) : ?>
+                  <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 1): ?>
                     <a href="?url=admin/manage">Manage</a>
-                  <?php endif ?>
+                  <?php endif?>
                   <a href="?url=cart/history">History</a>
                   <a href="?url=user/logout">Logout</a>
                 </div>
@@ -150,11 +150,11 @@
                   <li style="cursor:pointer" onclick="window.location='?url=user/logout/'">Log out</li>
                 </ul>
               </div>
-            <?php else : ?>
+            <?php else: ?>
               <!-- Chưa đăng nhập -->
               <a href="?url=user/login" class="color-green">Login</a>
               <a href="?url=user/signup" class="color-green">Signup</a>
-            <?php endif ?>
+            <?php endif?>
           </div>
         </div>
       </div>
