@@ -10,7 +10,7 @@
             where CategoryId=".$categoryId;  
         }
         else{
-            $query="select * from `product` where  CategoryId=".$categoryId." and SubcategoryTd = ".$subCategoryId;
+            $query="select * from `product` where  CategoryId=".$categoryId." and SubCategoryId = ".$subCategoryId;
     }
 }
     else{
