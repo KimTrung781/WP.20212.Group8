@@ -59,7 +59,7 @@
 
 
 <?php if (sizeof($products) > 0) : ?>
-    <div class="filter ">
+    <div class="filter " style="font-weight: bold;">
         Price:
         <input placeholder="From--" type='text' id="priceFrom"  onkeypress="handle(event)"></input>
         <input placeholder="To--" id="priceTo"  onkeypress="handle(event)"></input>
