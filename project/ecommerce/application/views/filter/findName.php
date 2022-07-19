@@ -3,7 +3,7 @@
 <script>
     var isFilter = false;
 
-    function getHTTPObject() {
+    function getHTTPObject() { 
         if (window.ActiveXObject) {
             return new ActiveXObject("Microsoft.XMLHTTP");
         } else if (window.XMLHttpRequest) {
