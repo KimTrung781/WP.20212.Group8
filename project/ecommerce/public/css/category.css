@@ -22,7 +22,7 @@
 
 .item:hover,
 .item:focus {
-    border: 1px solid #04AA6D;
+    border: 2px solid #0054a2;
     cursor: pointer;
 }
 
@@ -84,13 +84,14 @@
 .filter input:focus-visible,
 .filter button:focus-visible,
 .filter select:focus-visible {
-    border: 1px solid #04AA6D;
+    border: 2px solid #3e8e41;
 }
 
 .filter button {
-    background: #04AA6D;
+    background: #0054a2;
     color: #fff;
     border: none;
+    outline: none;
 }
 
 .filter select {

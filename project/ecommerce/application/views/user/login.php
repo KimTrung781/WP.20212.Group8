@@ -17,7 +17,7 @@
                                 <div class="loginForm">
                                     <div class="form-group">
                                         <p class="font-bold">Username</p>
-                                        <input class="form-control" placeholder="username" name="username" type="text" autofocus>
+                                        <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
                                     </div>
 
                                     <div class="form-group">
