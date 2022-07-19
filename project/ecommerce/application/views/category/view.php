@@ -35,9 +35,9 @@
         var http = new XMLHttpRequest();
         httpObject = getHTTPObject();
         if (httpObject != null) {
-            //httpObject.open('POST', url, true);
+            // httpObject.open('POST', url, true);
             httpObject.open("GET", url, true);
-            //httpObject.send(data);
+            // httpObject.send(data);
             httpObject.send(null);
             httpObject.onreadystatechange = function() { //Call a function when the state changes.
                 if (httpObject.readyState == 4 && httpObject.status == 200) {
@@ -46,8 +46,6 @@
 
                 }
             }
-
-
         }
     }
 </script>

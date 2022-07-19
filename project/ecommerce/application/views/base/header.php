@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="<?php echo PATH_URL_STYLE . 'base.css' ?>">
   <link rel="stylesheet" href="<?php echo PATH_URL_STYLE . 'common.css' ?>">
   <style>
-    button#myBtn {
+    /* button#myBtn {
       display: none;
       position: fixed;
       bottom: 20px;
@@ -18,11 +18,11 @@
       cursor: pointer;
       padding: 12px 15px;
       border-radius: 4px;
-    }
+    } */
 
-    button#myBtn:hover {
+    /* button#myBtn:hover {
       background-color: #e06666;
-    }
+    } */
   </style>
   <script>
     // When the user scrolls down 20px from the top of the document, show the button
