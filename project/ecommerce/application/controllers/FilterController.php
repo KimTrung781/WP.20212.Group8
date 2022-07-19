@@ -5,11 +5,12 @@
    {  
    if($categoryId)
    {
-       if($subCategoryId){
-    $query="select * from `product` 
-    where CategoryId=".$categoryId." and SubCategoryId = ".$subCategoryId;  }
-    else{
-        $query="select * from `product` where  CategoryId=".$categoryId;
+       if($subCategoryId == -1){
+            $query="select * from `product` 
+            where CategoryId=".$categoryId;  
+        }
+        else{
+            $query="select * from `product` where  CategoryId=".$categoryId." and SubcategoryTd = ".$subCategoryId;
     }
 }
     else{

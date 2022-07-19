@@ -21,8 +21,7 @@
         var orderby = document.getElementById("order").value;
         var categoryId = <?php echo $categoryId ?>;
 
-        if (categoryId != 3) console.log(categoryId);
-        var subCategoryId = "";
+        var subCategoryId = "-1";
         if (categoryId != 3) subCategoryId = <?php echo $subCategoryId ?>;
         var url = "http://localhost/ecommerce/?url=filter/filter/" + categoryId + "/" + subCategoryId + "/";
 
