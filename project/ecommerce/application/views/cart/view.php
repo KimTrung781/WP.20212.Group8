@@ -1,10 +1,11 @@
+<html style="background-color: aliceblue;">
 <head>
     <link rel="stylesheet" href="<?php echo PATH_URL_STYLE . 'cart.css' ?>">
 
 </head>
 <form id="cart_form" method="post" action="?url=cart/update/" role="form" onsubmit="return false;">
     <div class="col-xs-12">
-        <h1>Your cart</h1>
+        <h1 style="font-size: 50px; color: #3498db;" >Your Cart</h1>
         <br>
 
         <table class="table ">
@@ -94,7 +95,7 @@
         <br>
         <div class="form-group">
             <div class="btn-group">
-                <button type="button" class="update-btn disable" disabled onclick="updateCart()">Update cart</button>
+                <button type="button" class="update-btn disable" disabled onclick="updateCart()">Update Cart</button>
             </div>
         </div>
     </div>
@@ -124,6 +125,7 @@
         </div>
     </form>
 </div>
+</html>
 <script>
     let length = <?php echo $stt; ?>;
     let is_change = false;

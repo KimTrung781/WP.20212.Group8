@@ -1,3 +1,4 @@
+<html style="background-color: aliceblue;"> </html>
 <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 1) : ?>
     <link rel="stylesheet" href="<?php echo PATH_URL_STYLE . 'admin.css' ?>">
 
@@ -9,7 +10,7 @@
             <div class="modal-content">
                 <span class="close" onclick="hiddenModal()">&times;</span>
                 <form id="add-form" onsubmit="return submitadd(event,this)">
-                    <h3 id="modal-title">Add Product</h3>
+                    <h2 id="modal-title">Add Product</h2>
                     <div class="modal-body">
                         <div style="display:flex;justify-content:center;flex-direction:column">
                             <div class="inline-modal">
@@ -266,7 +267,7 @@
             <div id="pagination" class="page">
             </div>
             <div class="select">
-                Page size
+                Page Size
                 <select id="select-page-size" style="margin-right: 5px">
                     <option value="5">5</option>
                     <option value="10">10</option>

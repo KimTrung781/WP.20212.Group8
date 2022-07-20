@@ -49,6 +49,7 @@
     }
 </script>
 
+<html style="background-color: aliceblue;"> </html>
 <head>
     <link rel="stylesheet" href="<?php echo PATH_URL_STYLE . 'category.css' ?>">
 </head>
@@ -58,7 +59,7 @@
             Price:
             <input placeholder="From--" type='text' id="priceFrom"></input>
             <input placeholder="To--" id="priceTo"></input>
-            <select name="order" id="order">
+            <select name="order" id="order" style="width: 110px;">
                 <option value="0"> High to Low</option>
                 <option value="1"> Low to High</option>
             </select>

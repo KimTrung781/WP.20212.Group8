@@ -294,7 +294,11 @@ ul {
 select,
 input#quantity {
     height: fit-content;
-    padding: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16;
+    /* border: 1px solid #000000; */
+
 }
 
 button#myBtn {

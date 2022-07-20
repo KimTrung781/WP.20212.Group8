@@ -70,6 +70,7 @@ button.update-btn {
     font-size: 16px;
     border: none;
     border-radius: 10px;
+    margin-left: 1010px;
 }
 
 #checkout-form label {
@@ -99,6 +100,9 @@ button.update-btn {
 #checkout-form {
     width: fit-content;
     margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
 }
 
 .disable {
