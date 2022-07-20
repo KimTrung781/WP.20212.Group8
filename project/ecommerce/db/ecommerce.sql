@@ -206,9 +206,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`Id`, `Username`, `Password`, `is_admin`) VALUES
 (27, 'hangtt', 'c4ca4238a0b923820dcc509a6f75849b', 1),
-(28, 'hoang', 'c4ca4238a0b923820dcc509a6f75849b', 1),
-(29, 'testname', 'f1290186a5d0b1ceab27f4e77c0c5d68', 0),
-(32, 'testusername', '96e79218965eb72c92a549dd5a330112', 0);
+(01, 'admin101', 'ceea23519f6f86ad67e9f798bf8002cb',1);
 
 --
 -- Indexes for dumped tables

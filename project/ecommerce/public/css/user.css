@@ -37,7 +37,7 @@
 }
 
 body {
-    background-image: url("http://localhost/ecommerce/public/images/home/login-background.jpg");
+    background-image: url("http://localhost/ecommerce/public/images/home/background-login.png");
     height: 100vh;
     margin: unset;
     background-position: center;
