@@ -227,7 +227,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`Id`, `Username`, `Password`, `is_admin`) VALUES
 (27, 'hangtt', 'c4ca4238a0b923820dcc509a6f75849b', 1),
-(01, 'admin101', 'ceea23519f6f86ad67e9f798bf8002cb',1);
+(28, 'admin101', 'ceea23519f6f86ad67e9f798bf8002cb',1);
 
 --
 -- Indexes for dumped tables
